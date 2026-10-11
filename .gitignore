@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+**/__pycache__/
+.ipynb_checkpoints/
+*.pyc
+.DS_Store
+
+# Raw Kaggle files are large. holidays_events.csv at the repo root is the copy
+# that ships with the project. scripts/download_data.py fills data/raw/.
+data/raw/*
+!data/raw/.gitkeep
+data/processed/

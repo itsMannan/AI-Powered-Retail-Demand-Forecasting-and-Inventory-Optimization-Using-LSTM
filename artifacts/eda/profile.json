@@ -1,0 +1,367 @@
+{
+  "train": {
+    "shape": [
+      3000888,
+      6
+    ],
+    "dtypes": {
+      "id": "int64",
+      "date": "datetime64[us]",
+      "store_nbr": "int16",
+      "family": "str",
+      "sales": "float32",
+      "onpromotion": "int16"
+    },
+    "missing": {
+      "id": 0,
+      "date": 0,
+      "store_nbr": 0,
+      "family": 0,
+      "sales": 0,
+      "onpromotion": 0
+    },
+    "duplicate_rows": 0,
+    "head": [
+      {
+        "id": "0",
+        "date": "2013-01-01",
+        "store_nbr": "1",
+        "family": "AUTOMOTIVE",
+        "sales": "0.0",
+        "onpromotion": "0"
+      },
+      {
+        "id": "1",
+        "date": "2013-01-01",
+        "store_nbr": "1",
+        "family": "BABY CARE",
+        "sales": "0.0",
+        "onpromotion": "0"
+      },
+      {
+        "id": "2",
+        "date": "2013-01-01",
+        "store_nbr": "1",
+        "family": "BEAUTY",
+        "sales": "0.0",
+        "onpromotion": "0"
+      },
+      {
+        "id": "3",
+        "date": "2013-01-01",
+        "store_nbr": "1",
+        "family": "BEVERAGES",
+        "sales": "0.0",
+        "onpromotion": "0"
+      },
+      {
+        "id": "4",
+        "date": "2013-01-01",
+        "store_nbr": "1",
+        "family": "BOOKS",
+        "sales": "0.0",
+        "onpromotion": "0"
+      }
+    ],
+    "info": "<class 'pandas.DataFrame'>\nRangeIndex: 3000888 entries, 0 to 3000887\nData columns (total 6 columns):\n #   Column       Dtype         \n---  ------       -----         \n 0   id           int64         \n 1   date         datetime64[us]\n 2   store_nbr    int16         \n 3   family       str           \n 4   sales        float32       \n 5   onpromotion  int16         \ndtypes: datetime64[us](1), float32(1), int16(2), int64(1), str(1)\nmemory usage: 122.4 MB\n",
+    "duplicate_keys": 0,
+    "date_min": "2013-01-01",
+    "date_max": "2017-08-15",
+    "n_stores": 54,
+    "n_families": 33,
+    "n_dates": 1684,
+    "missing_days": [
+      "2013-12-25",
+      "2014-12-25",
+      "2015-12-25",
+      "2016-12-25"
+    ]
+  },
+  "test": {
+    "shape": [
+      28512,
+      5
+    ],
+    "dtypes": {
+      "id": "int64",
+      "date": "datetime64[us]",
+      "store_nbr": "int16",
+      "family": "str",
+      "onpromotion": "int16"
+    },
+    "missing": {
+      "id": 0,
+      "date": 0,
+      "store_nbr": 0,
+      "family": 0,
+      "onpromotion": 0
+    },
+    "duplicate_rows": 0,
+    "head": [
+      {
+        "id": "3000888",
+        "date": "2017-08-16",
+        "store_nbr": "1",
+        "family": "AUTOMOTIVE",
+        "onpromotion": "0"
+      },
+      {
+        "id": "3000889",
+        "date": "2017-08-16",
+        "store_nbr": "1",
+        "family": "BABY CARE",
+        "onpromotion": "0"
+      },
+      {
+        "id": "3000890",
+        "date": "2017-08-16",
+        "store_nbr": "1",
+        "family": "BEAUTY",
+        "onpromotion": "2"
+      },
+      {
+        "id": "3000891",
+        "date": "2017-08-16",
+        "store_nbr": "1",
+        "family": "BEVERAGES",
+        "onpromotion": "20"
+      },
+      {
+        "id": "3000892",
+        "date": "2017-08-16",
+        "store_nbr": "1",
+        "family": "BOOKS",
+        "onpromotion": "0"
+      }
+    ],
+    "info": "<class 'pandas.DataFrame'>\nRangeIndex: 28512 entries, 0 to 28511\nData columns (total 5 columns):\n #   Column       Non-Null Count  Dtype         \n---  ------       --------------  -----         \n 0   id           28512 non-null  int64         \n 1   date         28512 non-null  datetime64[us]\n 2   store_nbr    28512 non-null  int16         \n 3   family       28512 non-null  str           \n 4   onpromotion  28512 non-null  int16         \ndtypes: datetime64[us](1), int16(2), int64(1), str(1)\nmemory usage: 1.1 MB\n",
+    "date_min": "2017-08-16",
+    "date_max": "2017-08-31"
+  },
+  "stores": {
+    "shape": [
+      54,
+      5
+    ],
+    "dtypes": {
+      "store_nbr": "int64",
+      "city": "str",
+      "state": "str",
+      "store_type": "str",
+      "cluster": "int64"
+    },
+    "missing": {
+      "store_nbr": 0,
+      "city": 0,
+      "state": 0,
+      "store_type": 0,
+      "cluster": 0
+    },
+    "duplicate_rows": 0,
+    "head": [
+      {
+        "store_nbr": "1",
+        "city": "Quito",
+        "state": "Pichincha",
+        "store_type": "D",
+        "cluster": "13"
+      },
+      {
+        "store_nbr": "2",
+        "city": "Quito",
+        "state": "Pichincha",
+        "store_type": "D",
+        "cluster": "13"
+      },
+      {
+        "store_nbr": "3",
+        "city": "Quito",
+        "state": "Pichincha",
+        "store_type": "D",
+        "cluster": "8"
+      },
+      {
+        "store_nbr": "4",
+        "city": "Quito",
+        "state": "Pichincha",
+        "store_type": "D",
+        "cluster": "9"
+      },
+      {
+        "store_nbr": "5",
+        "city": "Santo Domingo",
+        "state": "Santo Domingo de los Tsachilas",
+        "store_type": "D",
+        "cluster": "4"
+      }
+    ],
+    "info": "<class 'pandas.DataFrame'>\nRangeIndex: 54 entries, 0 to 53\nData columns (total 5 columns):\n #   Column      Non-Null Count  Dtype\n---  ------      --------------  -----\n 0   store_nbr   54 non-null     int64\n 1   city        54 non-null     str  \n 2   state       54 non-null     str  \n 3   store_type  54 non-null     str  \n 4   cluster     54 non-null     int64\ndtypes: int64(2), str(3)\nmemory usage: 3.1 KB\n"
+  },
+  "oil": {
+    "shape": [
+      1218,
+      2
+    ],
+    "dtypes": {
+      "date": "datetime64[us]",
+      "dcoilwtico": "float64"
+    },
+    "missing": {
+      "date": 0,
+      "dcoilwtico": 43
+    },
+    "duplicate_rows": 0,
+    "head": [
+      {
+        "date": "2013-01-01",
+        "dcoilwtico": NaN
+      },
+      {
+        "date": "2013-01-02",
+        "dcoilwtico": "93.14"
+      },
+      {
+        "date": "2013-01-03",
+        "dcoilwtico": "92.97"
+      },
+      {
+        "date": "2013-01-04",
+        "dcoilwtico": "93.12"
+      },
+      {
+        "date": "2013-01-07",
+        "dcoilwtico": "93.2"
+      }
+    ],
+    "info": "<class 'pandas.DataFrame'>\nRangeIndex: 1218 entries, 0 to 1217\nData columns (total 2 columns):\n #   Column      Non-Null Count  Dtype         \n---  ------      --------------  -----         \n 0   date        1218 non-null   datetime64[us]\n 1   dcoilwtico  1175 non-null   float64       \ndtypes: datetime64[us](1), float64(1)\nmemory usage: 19.2 KB\n",
+    "date_min": "2013-01-01",
+    "date_max": "2017-08-31",
+    "null_prices": 43,
+    "dates_absent_from_file": 486
+  },
+  "transactions": {
+    "shape": [
+      83488,
+      3
+    ],
+    "dtypes": {
+      "date": "datetime64[us]",
+      "store_nbr": "int16",
+      "transactions": "int32"
+    },
+    "missing": {
+      "date": 0,
+      "store_nbr": 0,
+      "transactions": 0
+    },
+    "duplicate_rows": 0,
+    "head": [
+      {
+        "date": "2013-01-01",
+        "store_nbr": "25",
+        "transactions": "770"
+      },
+      {
+        "date": "2013-01-02",
+        "store_nbr": "1",
+        "transactions": "2111"
+      },
+      {
+        "date": "2013-01-02",
+        "store_nbr": "2",
+        "transactions": "2358"
+      },
+      {
+        "date": "2013-01-02",
+        "store_nbr": "3",
+        "transactions": "3487"
+      },
+      {
+        "date": "2013-01-02",
+        "store_nbr": "4",
+        "transactions": "1922"
+      }
+    ],
+    "info": "<class 'pandas.DataFrame'>\nRangeIndex: 83488 entries, 0 to 83487\nData columns (total 3 columns):\n #   Column        Non-Null Count  Dtype         \n---  ------        --------------  -----         \n 0   date          83488 non-null  datetime64[us]\n 1   store_nbr     83488 non-null  int16         \n 2   transactions  83488 non-null  int32         \ndtypes: datetime64[us](1), int16(1), int32(1)\nmemory usage: 1.1 MB\n"
+  },
+  "holidays": {
+    "shape": [
+      350,
+      6
+    ],
+    "dtypes": {
+      "date": "datetime64[us]",
+      "type": "str",
+      "locale": "str",
+      "locale_name": "str",
+      "description": "str",
+      "transferred": "bool"
+    },
+    "missing": {
+      "date": 0,
+      "type": 0,
+      "locale": 0,
+      "locale_name": 0,
+      "description": 0,
+      "transferred": 0
+    },
+    "duplicate_rows": 0,
+    "head": [
+      {
+        "date": "2012-03-02",
+        "type": "Holiday",
+        "locale": "Local",
+        "locale_name": "Manta",
+        "description": "Fundacion de Manta",
+        "transferred": "False"
+      },
+      {
+        "date": "2012-04-01",
+        "type": "Holiday",
+        "locale": "Regional",
+        "locale_name": "Cotopaxi",
+        "description": "Provincializacion de Cotopaxi",
+        "transferred": "False"
+      },
+      {
+        "date": "2012-04-12",
+        "type": "Holiday",
+        "locale": "Local",
+        "locale_name": "Cuenca",
+        "description": "Fundacion de Cuenca",
+        "transferred": "False"
+      },
+      {
+        "date": "2012-04-14",
+        "type": "Holiday",
+        "locale": "Local",
+        "locale_name": "Libertad",
+        "description": "Cantonizacion de Libertad",
+        "transferred": "False"
+      },
+      {
+        "date": "2012-04-21",
+        "type": "Holiday",
+        "locale": "Local",
+        "locale_name": "Riobamba",
+        "description": "Cantonizacion de Riobamba",
+        "transferred": "False"
+      }
+    ],
+    "info": "<class 'pandas.DataFrame'>\nRangeIndex: 350 entries, 0 to 349\nData columns (total 6 columns):\n #   Column       Non-Null Count  Dtype         \n---  ------       --------------  -----         \n 0   date         350 non-null    datetime64[us]\n 1   type         350 non-null    str           \n 2   locale       350 non-null    str           \n 3   locale_name  350 non-null    str           \n 4   description  350 non-null    str           \n 5   transferred  350 non-null    bool          \ndtypes: bool(1), datetime64[us](1), str(4)\nmemory usage: 28.7 KB\n",
+    "type_counts": {
+      "Holiday": 221,
+      "Event": 56,
+      "Additional": 51,
+      "Transfer": 12,
+      "Bridge": 5,
+      "Work Day": 5
+    },
+    "locale_counts": {
+      "National": 174,
+      "Local": 152,
+      "Regional": 24
+    },
+    "transferred_true": 12
+  }
+}
