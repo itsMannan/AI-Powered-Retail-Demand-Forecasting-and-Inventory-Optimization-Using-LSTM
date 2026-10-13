@@ -1,0 +1,3 @@
+max_depth,learning_rate,max_iter,seed,val_rmsle
+4,0.1,200,42,0.11252449886484578
+8,0.05,250,42,0.11156115299994793

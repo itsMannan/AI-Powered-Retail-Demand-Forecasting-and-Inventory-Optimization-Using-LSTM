@@ -1,0 +1,60 @@
+{
+  "bounds": {
+    "val_start": "2017-05-24",
+    "val_end": "2017-07-18",
+    "test_start": "2017-07-19",
+    "test_end": "2017-08-15"
+  },
+  "stores": [
+    44,
+    45,
+    47
+  ],
+  "families": [
+    "GROCERY I",
+    "BEVERAGES",
+    "PRODUCE",
+    "CLEANING",
+    "DAIRY"
+  ],
+  "horizon": 14,
+  "val_days": 56,
+  "test_days": 28,
+  "best_lstm": {
+    "units": 64,
+    "layers": 1,
+    "lr": 0.001,
+    "window": 28,
+    "dropout": 0.2
+  },
+  "best_lstm_val_rmsle": 0.12484916916885201,
+  "best_test_model_by_rmsle": "hist_gradient_boosting",
+  "lstm_test_rmsle": 0.15278457981205848,
+  "seasonal_naive_test_rmsle": 0.18435487646399557,
+  "lstm_beats_seasonal_naive": true,
+  "service_z": 1.6448536269514722,
+  "lead_time": 7,
+  "review_period": 7,
+  "holding_cost": 0.02,
+  "stockout_cost": 0.5,
+  "assumptions": [
+    "Recorded sales are treated as demand. The dataset has no inventory, so historical stockouts are censored and true demand is unobserved.",
+    "Service level is 95% (one-sided normal). Safety stock is z * sigma_error * sqrt(lead_time), with sigma_error equal to the standard deviation of daily validation forecast errors for that model and series.",
+    "Lead time is 7 days and the review period is 7 days. An order placed on a review day arrives 7 days later.",
+    "The order-up-to level is the forecast of demand over lead time plus review period, plus safety stock. The reorder point is the forecast over the lead time, plus safety stock.",
+    "The policy is periodic review: every 7 days, order enough to lift the inventory position (on hand + on order) up to the order-up-to level.",
+    "The simulation starts with on-hand inventory equal to that policy's own order-up-to level, so the comparison is not an artefact of starting from zero.",
+    "Holding cost is 0.02 per unit per day and stockout cost is 0.50 per unit of unmet sales. These are a cost index, not Favorita's accounting costs. Units differ across families (weight versus count), so a summed cost is only a rough total.",
+    "Promotions after the last observed day are assumed to be zero when a review looks past the end of the sample. No fixed order cost and no shelf-life limit are modelled."
+  ],
+  "dummy_cols": [
+    "store_44",
+    "store_45",
+    "store_47",
+    "family_BEVERAGES",
+    "family_CLEANING",
+    "family_DAIRY",
+    "family_GROCERY_I",
+    "family_PRODUCE"
+  ]
+}

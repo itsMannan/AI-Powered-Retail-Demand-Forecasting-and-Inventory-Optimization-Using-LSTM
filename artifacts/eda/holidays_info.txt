@@ -1,0 +1,13 @@
+<class 'pandas.DataFrame'>
+RangeIndex: 350 entries, 0 to 349
+Data columns (total 6 columns):
+ #   Column       Non-Null Count  Dtype         
+---  ------       --------------  -----         
+ 0   date         350 non-null    datetime64[us]
+ 1   type         350 non-null    str           
+ 2   locale       350 non-null    str           
+ 3   locale_name  350 non-null    str           
+ 4   description  350 non-null    str           
+ 5   transferred  350 non-null    bool          
+dtypes: bool(1), datetime64[us](1), str(4)
+memory usage: 28.7 KB

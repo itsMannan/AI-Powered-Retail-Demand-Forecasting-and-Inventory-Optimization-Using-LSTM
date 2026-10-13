@@ -1,0 +1,7 @@
+{
+  "units": 64,
+  "layers": 1,
+  "lr": 0.001,
+  "window": 28,
+  "dropout": 0.2
+}
