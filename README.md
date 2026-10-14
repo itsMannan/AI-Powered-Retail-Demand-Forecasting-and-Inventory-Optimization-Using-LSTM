@@ -15,8 +15,8 @@ src/models.py             baselines, gradient boosting, LSTM
 src/evaluate.py           MAE, RMSE, MAPE, sMAPE, RMSLE, plots
 src/inventory.py          safety stock, reorder point, simulation
 src/plots.py              exploratory charts
-notebooks/01_eda.ipynb    data checks and the written findings
 scripts/download_data.py
+scripts/run_eda.py        data checks and the written findings
 scripts/run_pipeline.py
 artifacts/                saved forecasts, metrics, figures, model
 ```
@@ -36,10 +36,10 @@ streamlit run app.py
 
 `DATA_DIR` defaults to `data/raw`. Override it with `DATA_DIR=/path/to/csvs python scripts/run_pipeline.py`.
 
-The notebook reads the same folder:
+Exploratory checks are a plain Python script. It prints the holiday file, the data profile, and the findings, and it saves PNG charts:
 
 ```bash
-jupyter nbconvert --to notebook --execute notebooks/01_eda.ipynb --inplace
+python scripts/run_eda.py
 ```
 
 The pipeline takes roughly ten minutes on a CPU. It writes `artifacts/`, including `models/lstm.keras`. The dashboard only reads those files, so it does not import TensorFlow.

@@ -5,7 +5,6 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import plotly.graph_objects as go
 
 from src.data import build_holiday_flags
 
@@ -37,12 +36,6 @@ def run_eda(raw, fig_dir):
     ax.set_ylabel("units")
     ax.legend()
     _save(fig, fig_dir / "01_total_sales.png")
-
-    interactive = go.Figure()
-    interactive.add_scatter(x=daily["date"], y=daily["sales"], name="daily total", line=dict(width=1))
-    interactive.add_scatter(x=daily["date"], y=daily["roll28"], name="28-day mean")
-    interactive.update_layout(title="Total unit sales", template="plotly_white", height=420)
-    interactive.write_html(fig_dir / "01_total_sales.html")
 
     family = train.groupby("family")["sales"].sum().sort_values(ascending=True)
     fig, ax = plt.subplots(figsize=(8, 7))
